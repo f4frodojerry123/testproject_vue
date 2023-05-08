@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h2>facebook</h2>
+  <login_box></login_box>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import login_box from './components/login_box.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    login_box
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+      h2{
+        color: #1877f2;
+        padding-top: 8px;
+        text-align: center;
+    }
 </style>
