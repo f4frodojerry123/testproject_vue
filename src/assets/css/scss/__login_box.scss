@@ -1,0 +1,431 @@
+.light {
+    $color: ("blue": #1877f2,
+        "l_blue": #576b95,
+        "gray": #4b4f56,
+        "l_gray": #d9d9d9,
+        "white": #ffffff,
+        "black": #000000,
+        "input":#f5f6f7);
+    $blue: map-get($color, "blue");
+    $l_blue: map-get($color, "l_blue");
+    $gray: map-get($color, "gray");
+    $l_gray: map-get($color, "l_gray");
+    $white: map-get($color, "white");
+    $black: map-get($color, "black");
+    $input: map-get($color, "input");
+    width: 100%;
+    height: 100vh;
+
+    h2{
+        color: #1877f2;
+        padding-top: 8px;
+        text-align: center;
+    }
+    .time{
+        color:$black
+    }
+    .login_box {
+
+
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        padding-top: 8px;
+        background-color: $white;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 448px;
+            margin-bottom: 12px;
+
+            input {
+                width: 416px;
+                box-sizing: border-box;
+                padding: 12px;
+                background: $input;
+                font-size: 14px;
+                line-height: 18px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 8px;
+                box-sizing: border-box;
+                color: $black;
+            }
+
+            input:focus {
+                outline: none;
+                border: 1px solid $gray;
+                box-shadow: 0 0 5px $black;
+                padding-top: 11px;
+                padding-bottom: 11px;
+            }
+
+            button {
+                width: 416px;
+                box-sizing: border-box;
+                background-color: $blue;
+                color: $white;
+                border: none;
+                font-size: 17px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 5px;
+                margin-top: 4px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        .mid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 448px;
+
+            a {
+                text-decoration: none;
+                color: $blue;
+                font-size: 14px;
+                font-weight: 100;
+                cursor: pointer;
+            }
+
+            span {
+                width: 100%;
+                text-align: center;
+                margin-top: 12px;
+                font-size: 14px;
+                font-weight: 100;
+                margin-bottom: 4px;
+                position: relative;
+            }
+
+            span::before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                left: 4%;
+                right: 55%;
+                top: 50%;
+                background-color: $l_gray;
+            }
+
+            span::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                left: 55%;
+                right: 4%;
+                top: 50%;
+                background-color: $l_gray;
+            }
+
+            button {
+                border: none;
+                width: 75%;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 14px;
+                line-height: 30px;
+                border: 1px solid $gray;
+                background: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 448px;
+            margin-bottom: 12px;
+            padding-top: 50px;
+
+            .lang {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+
+                    li {
+                        width: 50%;
+                        padding-top: 12px;
+
+                        a {
+                            text-decoration: none;
+                            color: $l_blue;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+
+            .more {
+                padding-top: 12px;
+                padding-bottom: 12px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        padding: 5px;
+
+                        a {
+                            text-decoration: none;
+                            color: $l_blue;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            span {
+                padding-top: 12px;
+                color: $l_blue;
+            }
+            .color_btn{
+                margin: 0 auto;
+                margin-top: 10px;
+                border: none;
+                background-color: #576b95;
+                border-radius: 5px;
+                color: $white;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.light.dark {
+            $color: ("blue": #1877f2,
+            "l_blue": #576b95,
+            "gray": #ffffff,
+            "l_gray": #000000,
+            // "white": #4b4f56,
+            "white": #373a3f,
+            // "black":  #d9d9d9,
+            "black": #d9d9d9,
+        );
+        $blue: map-get($color, "black");
+        $l_blue: map-get($color, "l_blue");
+        $gray: map-get($color, "gray");
+        $l_gray: map-get($color, "l_gray");
+        $white: map-get($color, "white");
+        $black: map-get($color, "black");
+        background-color: $white;
+
+
+        width: 100%;
+        height: 100vh;
+        .time#time{
+            color:$black;
+            h2{
+                text-align: center;
+                
+
+            }
+        }
+        h2{
+            color: $gray;
+            padding-top: 8px;
+            text-align: center;
+        }
+    .login_box {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        padding-top: 8px;
+        background-color: $white;   
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 448px;
+            margin-bottom: 12px;
+
+            input {
+                width: 416px;
+                box-sizing: border-box;
+                padding: 12px;
+                background: #f5f6f7;
+                font-size: 14px;
+                line-height: 18px;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 8px;
+                box-sizing: border-box;
+            }
+
+            input:focus {
+                outline: none;
+                border: 1px solid $gray;
+                box-shadow: 0 0 5px $black;
+                padding-top: 11px;
+                padding-bottom: 11px;
+            }
+
+            button {
+                width: 416px;
+                box-sizing: border-box;
+                background-color: $blue;
+                color: $white;
+                border: none;
+                font-size: 17px;
+                height: 40px;
+                line-height: 40px;
+                border-radius: 5px;
+                margin-top: 4px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        .mid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 448px;
+
+            a {
+                text-decoration: none;
+                color: $blue;
+                font-size: 14px;
+                font-weight: 100;
+                cursor: pointer;
+            }
+
+            span {
+                width: 100%;
+                text-align: center;
+                margin-top: 12px;
+                font-size: 14px;
+                font-weight: 100;
+                margin-bottom: 4px;
+                position: relative;
+                color: $black;
+            }
+
+            span::before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                left: 4%;
+                right: 55%;
+                top: 50%;
+                background-color: $gray;
+            }
+
+            span::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                left: 55%;
+                right: 4%;
+                top: 50%;
+                background-color: $gray;
+            }
+
+            button {
+                border: none;
+                width: 75%;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 14px;
+                line-height: 30px;
+                border: 1px solid $gray;
+                color: $black;
+                background-color: $blue;
+                background: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 448px;
+            margin-bottom: 12px;
+            padding-top: 50px;
+
+            .lang {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+
+                    li {
+                        width: 50%;
+                        padding-top: 12px;
+
+                        a {
+                            text-decoration: none;
+                            color: $blue;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+
+            .more {
+                padding-top: 12px;
+                padding-bottom: 12px;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        padding: 5px;
+
+                        a {
+                            text-decoration: none;
+                            color: $blue;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            span {
+                padding-top: 12px;
+                color: $blue;
+            }
+            .color_btn{
+                margin: 0 auto;
+                margin-top: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #fff;
+                color: $white;
+                padding: 5px;
+            }
+        }
+    }
+}

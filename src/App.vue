@@ -1,5 +1,4 @@
 <template>
-  <h2>facebook</h2>
   <login_box></login_box>
 </template>
 
@@ -13,9 +12,5 @@ export default {
 }
 </script>
 <style lang="scss">
-      h2{
-        color: #1877f2;
-        padding-top: 8px;
-        text-align: center;
-    }
+
 </style>

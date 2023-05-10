@@ -7,7 +7,7 @@ import jp from './jp'
 import pr from './pr'
 import vn from './vn'
 const i18n = new createI18n({
-    locale: 'fr', // 语言标识
+    locale: 'ch', // 语言标识
     messages: {
         en:en,
         ch:ch,

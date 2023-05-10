@@ -1,0 +1,69 @@
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+  
+    @include xl {
+      font-size: 32px;
+    }
+  
+    @include sm {
+      font-size: 24px;
+    }
+  }
+  
+  h3 {
+    font-size: 32px;
+  
+    @include xl {
+      font-size: 26px;
+    }
+  
+    @include sm {
+      font-size: 20px;
+    }
+  }
+  
+  p {
+    font-size: 20px;
+  
+    @include sm {
+      font-size: 16px;
+    }
+  }
+  
+  li {
+    font-size: 18px;
+  
+    @include sm {
+      font-size: 16px;
+    }
+  }
+  
+  .wrapper {
+    font-family: "Noto Sans TC";
+    margin: 0 auto;
+  }
+  
+.dark .login_box{
+  $color: (
+    "blue": #4b4f56,
+    "l_blue": #4b4f56,
+    "gray": #4b4f56,
+    "l_gray": #4b4f56,
+    "white": #4b4f56,
+    "black": #4b4f56,
+  );
+  $blue: map-get($color, "blue");
+  $l_blue: map-get($color, "l_blue");
+  $gray: map-get($color, "gray");
+  $l_gray: map-get($color, "l_gray");
+  $white: map-get($color, "white");
+  $black: map-get($color, "black");
+}
+
+.light .login_box{
+ 
+}
+
+  
+  
