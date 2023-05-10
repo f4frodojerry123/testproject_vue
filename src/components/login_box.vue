@@ -1,99 +1,74 @@
 <template>
-  <div class="light" :class="{ dark: dark }">
-    
-  <h2 >facebook</h2>
-    <div class="login_box">
-      <time_block></time_block>
-        <div class="top">
-            <input type="text" 
-            :placeholder="$t('acc_placeholder')" class="account" 
-            @keyup.enter="clarify"
-            v-model="account" >
-            <input type="text" 
-            :placeholder="$t('pwd_placeholder')" class="password" 
-            @keyup.enter="clarify"
-            v-model="password">
-            <button @click="clarify">{{$t('login_btn')}}</button>
-        </div>
-        <div class="mid">
-            <a href="">{{$t('forget')}}?</a>
-            <span>{{$t('or')}}</span>
-            <button>{{$t('register')}}</button>
-        </div>
-        <div class="bottom">
-            <div class="lang">
-                <ul>
-                    <li><a class="ch" @click="change_lang">中文(台灣)</a></li>
-                    <li><a class="en" @click="change_lang">English (US)</a></li>
-                    <li><a class="vn" @click="change_lang">Vietnamese</a></li>
-                    <li><a class="ind" @click="change_lang">Bahasa Indonesia</a></li>
-                    <li><a class="pr" @click="change_lang">Português (Brasil)</a></li>
-                    <li><a class="fr" @click="change_lang">Français (France)</a></li>
-                    <li><a class="jp" @click="change_lang">japanese</a></li>
-                    <li><a>more</a></li>
-                </ul>
+    <div class="light" :class="{ dark: dark }">
+        <div class="alert" v-if="login" @click="close_alert">
+            <div class="login_bg">
             </div>
-            <div class="more">
-                <ul>
-                    <li><a href="">{{$t('about')}}</a></li>
-                    <li><a href="">{{$t('info')}}</a></li>
-                    <li><a href="">{{$t('more')}}</a></li>
-                </ul>
+            <div class="login_text">
+                <h6 v-if="login_soc_fail">
+                    {{ $t('success') }}！
+                </h6>
+                <h6 v-else>
+                    {{ $t('fail') }}！
+                </h6>
             </div>
-            <span>Meta 2023</span>
-            <button @click="changecolor" class="color_btn">{{btntext}}</button>
         </div>
+        <h2>facebook</h2>
+        <div class="login_box">
+            <time_block></time_block>
+            <top_block @login_status="login_event"></top_block>
+            <div class="mid">
+                <a href="">{{ $t('forget') }}?</a>
+                <span>{{ $t('or') }}</span>
+                <button>{{ $t('register') }}</button>
+            </div>
+            <bottom_block @child-send="change_color"></bottom_block>
 
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 import time_block from "./time_block.vue"
+import top_block from "./top_block.vue"
+import bottom_block from "./bottom_block.vue"
 export default {
     name: 'login_box',
-    data(){
-        return{
-            account:"",
-            password : "",
-            lang_now : "",
-            dark : false,
-            btntext:"深色模式"
+    data() {
+        return {
+            dark: false,
+            login: false,
+            login_text: "",
+            login_soc_fail:true
         }
     },
     components: {
-    time_block
+        time_block,
+        top_block,
+        bottom_block
     },
     props: {
-        
+
     },
-    methods:{
-        clarify(){
-            if (this.account == "abc123" && this.password == "abc123") {
-                // console.log(this.$i18n);
-                // alert(this.$i18n.messages.en.success)
-                alert("登入成功")
-            }else{
-               
-                alert("帳號或密碼輸入錯誤")
-                this.password = ""
+    methods: {
+        change_color(message) {
+            if (message == "dark") {
+                this.dark = true;
+            }
+            else if (message == "light") {
+                this.dark = false;
             }
         },
-        change_lang(e){
-            // console.log(e.target.classList);
-            let lang = e.target.classList[0]
-            this.lang_now = lang
-            this.$i18n.locale = lang
+        login_event(message) {
+            this.login = true;
+            this.login_text = message
+            if (message == "true") {
+                this.login_soc_fail = true         
+            }else{
+                this.login_soc_fail = false
+            }
         },
-        changecolor(){
-          if(this.dark == false){
-            this.dark = true;
-            this.btntext = "淺色模式"
-          }
-          else if(this.dark == true){
-            this.dark = false;
-            this.btntext = "深色模式"
-          }
+        close_alert() {
+            this.login = false
         }
     }
 
@@ -102,7 +77,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 
-<style lang="scss" scoped>
+<style lang="scss" ::deep>
 @import "@/assets/css/scss/style.scss";
-
 </style>

@@ -1,11 +1,16 @@
 {
-    "acc_placeholder":"Número de celular ou email",
-    "pwd_placeholder":"Senha",
-    "login_btn":"Entrar",
-    "forget":"Esqueceu a senha?",
-    "or":"ou",
-    "register":"Criar nova conta",
-    "about":"about",
-    "info":"information",
-    "more":"more"
+    "acc_placeholder": "Número de celular ou email",
+    "pwd_placeholder": "Senha",
+    "login_btn": "Entrar",
+    "forget": "Esqueceu a senha?",
+    "or": "ou",
+    "register": "Criar nova conta",
+    "about": "Sobre",
+    "info": "Explicação",
+    "more": "Mais",
+    "time": "Hora atual",
+    "success": "Login bem sucedido",
+    "fail": "Nome de usuário ou senha incorretos",
+    "light": "claro",
+    "dark": "escuro"
 }

@@ -1,11 +1,16 @@
 {
-    "acc_placeholder":"Số di động hoặc email",
-    "pwd_placeholder":"Mật khẩu",
-    "login_btn":"Đăng nhập",
-    "forget":"Quên mật khẩu?",
-    "or":"hoặc",
-    "register":"Tạo tài khoản mới",
-    "about":"about",
-    "info":"information",
-    "more":"more"
+    "acc_placeholder": "Số di động hoặc email",
+    "pwd_placeholder": "Mật khẩu",
+    "login_btn": "Đăng nhập",
+    "forget": "Quên mật khẩu?",
+    "or": "hoặc",
+    "register": "Tạo tài khoản mới",
+    "about": "Về",
+    "info": "Giải thích",
+    "more": "Thêm",
+    "time": "thời điểm hiện tại",
+    "success": "Đăng nhập thành công",
+    "fail": "Tên đăng nhập hoặc mật khẩu sai",
+    "light": "sáng",
+    "dark": "tối"
 }

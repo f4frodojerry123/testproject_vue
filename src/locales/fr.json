@@ -1,11 +1,16 @@
 {
-    "acc_placeholder":"Numéro mobile ou e-mail",
-    "pwd_placeholder":"Mot de passe",
-    "login_btn":"Se connecter",
-    "forget":"Mot de passe oublié",
-    "or":"ou",
-    "register":"Créer nouveau compte",
-    "about":"about",
-    "info":"information",
-    "more":"more"
+    "acc_placeholder": "Numéro mobile ou e-mail",
+    "pwd_placeholder": "Mot de passe",
+    "login_btn": "Se connecter",
+    "forget": "Mot de passe oublié",
+    "or": "ou",
+    "register": "Créer nouveau compte",
+    "about": "À propos de",
+    "info": "Explication",
+    "more": "Plus",
+    "time": "Heure actuelle",
+    "success": "Connexion réussie",
+    "fail": "Nom d'utilisateur ou mot de passe incorrect",
+    "light": "clair",
+    "dark": "sombre"
 }

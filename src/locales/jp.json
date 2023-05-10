@@ -1,11 +1,16 @@
 {
-    "acc_placeholder":"携帯電話番号またはメールアドレス",
-    "pwd_placeholder":"パスワード",
-    "login_btn":"ログイン",
-    "forget":"パスワードを忘れた場合",
-    "or":"または",
-    "register":"新しいアカウントを作成",
-    "about":"about",
-    "info":"information",
-    "more":"more"
+    "acc_placeholder": "携帯電話番号またはメールアドレス",
+    "pwd_placeholder": "パスワード",
+    "login_btn": "ログイン",
+    "forget": "パスワードを忘れた場合",
+    "or": "または",
+    "register": "新しいアカウントを作成",
+    "about": "に関して",
+    "info": "説明 ",
+    "more": "もっと",
+    "time": "現在の時刻",
+    "success": "ログインに成功しました",
+    "fail": "ユーザー名またはパスワードが間違っています",
+    "light": "明るい",
+    "dark": "暗い"
 }

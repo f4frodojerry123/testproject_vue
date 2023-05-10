@@ -8,7 +8,9 @@
     "about": "about",
     "info": "information",
     "more": "more",
-    "success":"log in success"
-
-
+    "success": "Login successful",
+    "fail": "Incorrect username or password",
+    "time": "Current time",
+    "light": "light",
+    "dark": "dark"
 }

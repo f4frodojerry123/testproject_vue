@@ -5,7 +5,12 @@
     "forget": "Lupa Kata Sandi",
     "or": "atau",
     "register": "Buat akun baru",
-    "about": "about",
-    "info": "information",
-    "more": "more"
+    "about": "Tentang",
+    "info": "Penjelasan",
+    "more": "Lebih banyak",
+    "time": "Waktu sekarang",
+    "success": "Berhasil masuk",
+    "fail": "Nama pengguna atau ",
+    "light": "terang",
+    "dark": "gelap"
 }

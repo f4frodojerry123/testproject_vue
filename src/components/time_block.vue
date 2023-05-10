@@ -1,8 +1,8 @@
 <template>
     <div class="time" id="time">
-        <div class="h3">當前時間</div>
-        <h3>{{ nowDay }}</h3>
-        <h3>{{ nowTime }}</h3>
+        <div class="h3">{{ $t('time') }}</div>
+        <h6>{{ nowDay }}</h6>
+        <h6>{{ nowTime }}</h6>
     </div>
 </template>
 
@@ -20,7 +20,6 @@ export default {
 
     },
     created() {
-
         this.nowTimes();
     },
     mounted() {
@@ -35,9 +34,8 @@ export default {
             let hh = newdate.getHours() < 10 ? "0" + newdate.getHours() : newdate.getHours();
             let mm = newdate.getMinutes() < 10 ? "0" + newdate.getMinutes() : newdate.getMinutes();
             let ss = newdate.getSeconds() < 10 ? "0" + newdate.getSeconds() : newdate.getSeconds();
-
             this.nowTime = hh + ":" + mm + ":" + ss;
-            this.nowDay = year + "年" + month + "月" + date + "日";
+            this.nowDay = year + "/" + month + "/" + date ;
         },
         // 定時器函數
         nowTimes() {
@@ -54,12 +52,12 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 @import "@/assets/css/scss/common/__reset.scss";
 .h3{
     text-align: center;
 }
-h3{
+h6{
     margin-top: 5px;
     margin-bottom: 5px;
     text-align: center;
